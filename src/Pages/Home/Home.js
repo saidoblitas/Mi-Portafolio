@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home-container">
       {}
       <Header />
-      <div className="welcome-text">BIENVENIDO A MI PORTAFOLIO</div>
+      <div className="welcome-text">WELCOME TO MY PORTFOLIO</div>
     </div>
   );
 };
