@@ -1,0 +1,49 @@
+.home-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom,
+    #06141B,
+    #11212D,
+    #253745,
+    #4A5C6A,
+    #9BABAB,
+    #CCD0CF
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-text {
+  font-family: 'Consolas', monospace;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 4px solid #9BABAB;
+  padding-right: 5px;
+  animation: typing 8s steps(30) 0s infinite, blink 0.75s step-end infinite;
+  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
