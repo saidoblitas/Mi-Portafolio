@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Loading from './Components/Loading/Loading';
-import Home from '../src/Pages/Home/Home';
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+import Header from './Components/Header/Header';
+import Clock from './Components/Clock/Clock';
 import './App.css';
 
 const App = () => {
@@ -16,9 +19,19 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        {isLoading ? <Loading /> : <Routes>
-          <Route path="/home" element={<Home />} />
-        </Routes>}
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            <Header />
+            <Routes>
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/clock" element={<Clock />} /> {}
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </>
+        )}
       </div>
     </Router>
   );
