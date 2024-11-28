@@ -51,6 +51,7 @@
   }
 }
 
+
 .home-hero__socials {
   position: fixed;
   top: 50%;
@@ -62,11 +63,11 @@
   flex-direction: column;
   gap: 1rem;
   z-index: 10;
-  animation: slideInFromLeft 3s ease-out;
+  animation: slideInFromLeft 2s ease-out;
 }
 .home-hero__social-icon-link:hover {
   transform: scale(1.2);
-  box-shadow: 0 10px 20px rgba(159, 124, 255, 0.4);
+  box-shadow: 0 20px 30px rgba(159, 138, 219, 0.4);
 }
 .home-hero__social-icon-link {
   text-decoration: none;

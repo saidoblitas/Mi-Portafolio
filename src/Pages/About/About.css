@@ -1,0 +1,165 @@
+.about-container-about {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(10, 0, 27);
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  animation: aboutFadeIn 1s forwards;
+}
+
+.about-content-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+  max-width: 100%;
+  padding-left: 3vw;
+}
+
+.text-section-about {
+  max-width: 600px;
+  padding-left: 10px;
+  opacity: 0;
+  animation: aboutSlideInLeft 1s forwards;
+}
+
+.text-section-about h1 {
+  font-size: 7rem;
+  margin-bottom: 10px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  color: transparent;
+  animation: aboutDrawText 2s forwards;
+}
+
+.text-section-about p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.image-section-about {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: aboutSlideInFromRight 1.5s ease-out forwards;
+}
+
+.profile-image-about {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+}
+
+.image-gallery-about {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: aboutSlideInBottom 2s forwards;
+}
+
+.image-gallery-about img {
+  border-radius: 8px;
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery-about img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px 10px rgba(255, 255, 255, 1);
+}
+
+.random-facts-container {
+  background-color: white;
+  width: 100%;
+  border-radius: 50%;
+  padding: 20px;
+  margin-top: 40px;
+  overflow-y: auto;
+  height: 400px;
+}
+
+.random-facts-content {
+  text-align: center;
+}
+
+.random-facts-content h2 {
+  font-size: 2.5rem;
+  color: rgb(10, 0, 27);
+  margin-bottom: 20px;
+}
+
+.random-facts-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.random-facts-content li {
+  font-size: 1.2rem;
+  color: rgb(10, 0, 27);
+  margin-bottom: 10px;
+}
+
+@keyframes aboutSlideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes aboutSlideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes aboutSlideInBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes aboutFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes aboutDrawText {
+  to {
+    color: white;
+  }
+}

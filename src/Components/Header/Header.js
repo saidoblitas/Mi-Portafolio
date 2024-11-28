@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -13,6 +14,10 @@ const Header = () => {
     window.location.href = '/';
   };
 
+  const getLinkClass = (path) => {
+    return location.pathname === path ? 'active-link' : '';
+  };
+
   return (
     <div className={`header-container ${darkMode ? 'dark' : ''}`}>
       <div className="header-title" onClick={goToHome}>
@@ -20,9 +25,11 @@ const Header = () => {
       </div>
 
       <div className="header-links">
-        <Link to="/about">About</Link> {}
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <Link to="/about" className={getLinkClass('/about')}>About</Link>
+        <Link to="/projects" className={getLinkClass('/projects')}>Projects</Link>
+        <Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>
+        <Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>
+        <Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>
       </div>
 
       <div className="toggle-container">
