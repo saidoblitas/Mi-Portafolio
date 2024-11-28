@@ -20,15 +20,7 @@
   font-weight: bold;
   color: white;
   text-transform: uppercase;
-  text-shadow: 0 0 10px white;
   cursor: pointer;
-  transition: text-shadow 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.header-title:hover {
-  text-shadow: 0 0 20px #CCD0CF, 0 0 30px #CCD0CF;
-  color: #CCD0CF;
-  transform: scale(1.1);
 }
 
 .header-links {
@@ -44,14 +36,23 @@
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: bold;
-  text-shadow: 0 0 10px white;
-  transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
-.header-links a:hover {
-  color: #CCD0CF;
-  text-shadow: 0 0 10px #CCD0CF, 0 0 20px #CCD0CF;
-  transform: scale(1.1);
+.header-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transition: width 0.6s ease;
+}
+
+.header-links a:hover::after {
+  width: 100%;
 }
 
 .header-divider {
@@ -75,4 +76,3 @@
 .main-content {
   margin-top: 80px;
 }
-

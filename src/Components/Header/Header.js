@@ -20,7 +20,6 @@ const Header = () => {
       </div>
 
       <div className="header-links">
-        <Link to="/clock">Clock</Link> {}
         <Link to="/about">About</Link> {}
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>

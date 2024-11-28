@@ -4,7 +4,6 @@ import Loading from './Components/Loading/Loading';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Header from './Components/Header/Header';
-import Clock from './Components/Clock/Clock';
 import './App.css';
 
 const App = () => {
@@ -27,7 +26,6 @@ const App = () => {
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/clock" element={<Clock />} /> {}
               <Route path="/" element={<Home />} />
             </Routes>
           </>
