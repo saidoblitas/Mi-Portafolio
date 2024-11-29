@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
@@ -8,13 +8,7 @@ import TorchComponent from "./Components/TorchComponent/TorchComponent";
 import "./App.css";
 
 const App = () => {
-  const savedTheme = localStorage.getItem("isLightTheme") === "true";
-
-  const [isLightTheme, setIsLightTheme] = useState(savedTheme);
-
-  useEffect(() => {
-    localStorage.setItem("isLightTheme", isLightTheme);
-  }, [isLightTheme]);
+  const [isLightTheme, setIsLightTheme] = useState(false);
 
   const handleThemeChange = (isChecked) => {
     setIsLightTheme(isChecked);
@@ -23,11 +17,8 @@ const App = () => {
   return (
     <Router>
       <div className={`App ${isLightTheme ? "light-theme" : "dark-theme"}`}>
-        <TorchComponent
-          isLightTheme={isLightTheme}
-          onThemeChange={handleThemeChange}
-        />
-        <Header isLightTheme={isLightTheme} />
+        <TorchComponent onThemeChange={handleThemeChange} />
+        <Header isLightTheme={isLightTheme} /> {/* Pasamos isLightTheme al Header */}
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
