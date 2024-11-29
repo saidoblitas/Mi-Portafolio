@@ -1,8 +1,8 @@
 .about-container-about {
   padding: 0;
   margin: 0;
-  background-color: rgb(10, 0, 27);
-  color: white;
+  background-color: inherit;
+  color: inherit;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -13,6 +13,14 @@
   position: relative;
   opacity: 0;
   animation: aboutFadeIn 1s forwards;
+}
+
+.text-section-about h1 {
+  color: inherit;
+}
+
+.text-section-about p {
+  color: inherit;
 }
 
 .about-content-about {
@@ -36,16 +44,14 @@
 .text-section-about h1 {
   font-size: 7rem;
   margin-bottom: 10px;
-  color: white;
+  color: transparent;
   position: relative;
   overflow: hidden;
-  color: transparent;
   animation: aboutDrawText 2s forwards;
 }
 
 .text-section-about p {
   font-size: 1.2rem;
-  color: white;
   line-height: 1.4;
   margin-bottom: 10px;
 }
@@ -89,13 +95,13 @@
 }
 
 .random-facts-container {
-  background-color: white;
   width: 100%;
   border-radius: 50%;
   padding: 20px;
   margin-top: 40px;
   overflow-y: auto;
   height: 400px;
+  background-color: inherit;
 }
 
 .random-facts-content {
@@ -104,18 +110,18 @@
 
 .random-facts-content h2 {
   font-size: 2.5rem;
-  color: rgb(10, 0, 27);
+  color: inherit;
   margin-bottom: 20px;
 }
 
-.random-facts-content ul {
+random-facts-content ul {
   list-style-type: none;
   padding: 0;
 }
 
 .random-facts-content li {
   font-size: 1.2rem;
-  color: rgb(10, 0, 27);
+  color: inherit;
   margin-bottom: 10px;
 }
 
@@ -160,6 +166,6 @@
 
 @keyframes aboutDrawText {
   to {
-    color: white;
+    color: inherit;
   }
 }

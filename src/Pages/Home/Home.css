@@ -6,14 +6,12 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
 }
 
 .welcome-text {
   font-family: 'Consolas', monospace;
   font-size: 4rem;
   font-weight: bold;
-  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -25,6 +23,15 @@
   animation: typing 5s steps(30) 0s infinite, blink 0.75s step-end infinite;
   -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 }
+
+.welcome-text.white {
+  color: #ffffff;
+}
+
+.welcome-text.black {
+  color: #000000;
+}
+
 
 @keyframes typing {
   0% {
@@ -40,6 +47,16 @@
     border-color: transparent;
   }
 }
+
+@keyframes torchEffect {
+  0% {
+    color: #ffffff;
+  }
+  50% {
+    color: #000000;
+  }
+}
+
 @keyframes slideInFromLeft {
   0% {
     opacity: 0;
@@ -50,7 +67,6 @@
     transform: translateX(200);
   }
 }
-
 
 .home-hero__socials {
   position: fixed;
@@ -65,10 +81,12 @@
   z-index: 10;
   animation: slideInFromLeft 2s ease-out;
 }
+
 .home-hero__social-icon-link:hover {
   transform: scale(1.2);
   box-shadow: 0 20px 30px rgba(159, 138, 219, 0.4);
 }
+
 .home-hero__social-icon-link {
   text-decoration: none;
   display: flex;
@@ -114,4 +132,3 @@
     display: none;
   }
 }
-

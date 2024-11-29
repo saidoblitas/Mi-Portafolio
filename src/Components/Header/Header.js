@@ -19,14 +19,14 @@ const Header = () => {
   };
 
   return (
-    <div className={`header-container ${darkMode ? 'dark' : ''}`}>
+    <div className={`header-container ${darkMode ? 'torch-on' : 'torch-off'}`}>
       <div className="header-title" onClick={goToHome}>
         I'M SAID
       </div>
 
       <div className="header-links">
         <Link to="/about" className={getLinkClass('/about')}>About</Link>
-        <Link to="/projects" className={getLinkClass('/projects')}>Projects</Link> {}
+        <Link to="/projects" className={getLinkClass('/projects')}>Projects</Link>
         <Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>
       </div>
 

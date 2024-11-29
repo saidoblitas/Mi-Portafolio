@@ -1,22 +1,39 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #000;
+  padding: 10px 20px;
+}
+
 .project-container {
+  padding-top: 70px;
   text-align: center;
-  margin-top: 150px;
-  color: white;
+  padding-bottom: 50px;
 }
 
 .project-title {
   font-size: 2.5rem;
   margin-bottom: 50px;
-  color: white;
   animation-duration: 1s;
+  color: inherit;
 }
 
 .project-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   gap: 50px;
+  margin-top: 50px;
 }
 
 .image-container {
@@ -50,18 +67,29 @@
 .project-description h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: inherit;
 }
 
 .project-description p {
   font-size: 1.1rem;
   margin-bottom: 20px;
+  color: inherit;
 }
 
 .go-to-project-btn {
   padding: 10px 20px;
-  background-color: #1b233d;
-  color: white;
-  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-to-project-btn:hover {
+  background-color: #048fbb;
+}
+
+.go-to-project-btn {
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -84,17 +112,30 @@
   background-color: inherit;
   border-radius: 100px;
   font-weight: 600;
-  color: greenyellow;
+  color: #fff;
   box-shadow: 0 0 0 2px greenyellow;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+.animated-button.torch-on {
+  color: #212121;
+  background-color: transparent;
+}
+
+.animated-button.torch-off {
+  color: #fff;
+  background-color: transparent;
+}
+
+
+
+
 .animated-button svg {
   position: absolute;
   width: 24px;
-  fill: greenyellow;
+  fill: #fff;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -160,7 +201,6 @@
   opacity: 1;
 }
 
-/* Quitar subrayado de los links */
 a {
   text-decoration: none;
 }
