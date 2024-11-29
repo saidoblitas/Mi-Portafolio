@@ -26,9 +26,7 @@ const Header = () => {
 
       <div className="header-links">
         <Link to="/about" className={getLinkClass('/about')}>About</Link>
-        <Link to="/projects" className={getLinkClass('/projects')}>Projects</Link>
-        <Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>
-        <Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>
+        <Link to="/projects" className={getLinkClass('/projects')}>Projects</Link> {}
         <Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>
       </div>
 

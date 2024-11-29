@@ -44,7 +44,7 @@ const Home = () => {
         </a>
         {/* Gmail */}
         <a
-          href="https://www.youtube.com/@elSaidMC"
+          href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjssRnDxjbdSwWnmhqNVzTQjCxBLWmrBhcwqFtTGhCGMjhvNKKLLTDZSxxrBPpFQTBfMXq"
           className="home-hero__social-icon-link"
           rel="noreferrer"
           target="_blank"

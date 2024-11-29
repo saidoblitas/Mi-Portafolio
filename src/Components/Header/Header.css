@@ -10,7 +10,7 @@
   align-items: center;
   z-index: 1000;
   padding: 0 20px;
-  animation: slideDown 2s ease-out;
+  animation: slideDown 1s ease-out;
 }
 
 .header-title {

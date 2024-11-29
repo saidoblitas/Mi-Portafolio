@@ -22,7 +22,7 @@
   display: inline-block;
   border-right: 4px solid #9BABAB;
   padding-right: 5px;
-  animation: typing 8s steps(30) 0s infinite, blink 0.75s step-end infinite;
+  animation: typing 5s steps(30) 0s infinite, blink 0.75s step-end infinite;
   -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 }
 
@@ -31,7 +31,7 @@
     width: 0;
   }
   100% {
-    width: 105%;
+    width: 65%;
   }
 }
 
