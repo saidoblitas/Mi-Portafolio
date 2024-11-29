@@ -1,8 +1,67 @@
+@keyframes aboutSlideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes aboutSlideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes aboutSlideInBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes aboutFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes aboutDrawText {
+  to {
+    color: inherit;
+  }
+}
+
+
+@keyframes titleSlideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 header {
@@ -19,12 +78,13 @@ header {
   padding-top: 70px;
   text-align: center;
   padding-bottom: 50px;
+  overflow: hidden;
 }
 
 .project-title {
   font-size: 2.5rem;
   margin-bottom: 50px;
-  animation-duration: 1s;
+  animation: titleSlideInFromTop 2s ease-out;
   color: inherit;
 }
 
@@ -42,6 +102,8 @@ header {
   justify-content: flex-start;
   padding-left: 200px;
   transition: transform 0.3s ease;
+  animation: aboutSlideInLeft 2s ease-in-out;
+  overflow: hidden;
 }
 
 .image-container img {
@@ -62,6 +124,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: aboutSlideInFromRight 2s ease-in-out;
 }
 
 .project-description h2 {
@@ -74,18 +137,6 @@ header {
   font-size: 1.1rem;
   margin-bottom: 20px;
   color: inherit;
-}
-
-.go-to-project-btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.go-to-project-btn:hover {
-  background-color: #048fbb;
 }
 
 .go-to-project-btn {
@@ -128,9 +179,6 @@ header {
   color: #fff;
   background-color: transparent;
 }
-
-
-
 
 .animated-button svg {
   position: absolute;
