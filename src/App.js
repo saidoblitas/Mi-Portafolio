@@ -5,6 +5,8 @@ import About from "./Pages/About/About";
 import Project from "./Pages/Projects/Projects";
 import Header from "./Components/Header/Header";
 import TorchComponent from "./Components/TorchComponent/TorchComponent";
+import Contact from "./Pages/Contact/Contact-components";
+
 import "./App.css";
 
 const App = () => {
@@ -18,11 +20,12 @@ const App = () => {
     <Router>
       <div className={`App ${isLightTheme ? "light-theme" : "dark-theme"}`}>
         <TorchComponent onThemeChange={handleThemeChange} />
-        <Header isLightTheme={isLightTheme} /> {/* Pasamos isLightTheme al Header */}
+        <Header isLightTheme={isLightTheme} />
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Project />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>

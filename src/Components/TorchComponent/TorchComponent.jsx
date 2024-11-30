@@ -4,9 +4,16 @@ import "./TorchComponent.css";
 const TorchComponent = ({ onThemeChange }) => {
   const savedTheme = localStorage.getItem("isLightTheme") === "true";
   const [isChecked, setIsChecked] = useState(savedTheme);
+
   useEffect(() => {
     localStorage.setItem("isLightTheme", isChecked);
     onThemeChange(isChecked);
+
+    if (isChecked) {
+      document.body.style.backgroundColor = "transparent";
+    } else {
+      document.body.style.backgroundColor = "#333";
+    }
   }, [isChecked, onThemeChange]);
 
   const handleCheckboxChange = () => {

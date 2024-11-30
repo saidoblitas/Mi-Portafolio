@@ -14,17 +14,7 @@ body {
 }
 
 .light-theme {
-  background: rgb(200, 200, 200);
+  background: rgb(150, 147, 147);
 
   color: black;
-}
-
-.header-container.light {
-  background-color: white;
-  color: #212121;
-}
-
-.header-container.dark {
-  background-color: rgb(10, 0, 27);
-  color: white;
 }

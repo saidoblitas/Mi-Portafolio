@@ -20,7 +20,7 @@
   display: inline-block;
   border-right: 4px solid #9BABAB;
   padding-right: 5px;
-  animation: typing 5s steps(30) 0s infinite, blink 0.75s step-end infinite;
+  animation: typing 6s steps(30) infinite, blink 0.75s step-end infinite;
   -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 }
 
@@ -32,13 +32,21 @@
   color: #000000;
 }
 
-
 @keyframes typing {
-  0% {
+  from {
     width: 0;
   }
-  100% {
-    width: 65%;
+  to {
+    width: 40%;
+  }
+}
+
+@keyframes typing-mobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
   }
 }
 
@@ -48,23 +56,14 @@
   }
 }
 
-@keyframes torchEffect {
-  0% {
-    color: #ffffff;
-  }
-  50% {
-    color: #000000;
-  }
-}
-
-@keyframes slideInFromLeft {
+@keyframes fadeInIcon {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: scale(0);
   }
   100% {
     opacity: 1;
-    transform: translateX(200);
+    transform: scale(1);
   }
 }
 
@@ -79,7 +78,6 @@
   flex-direction: column;
   gap: 1rem;
   z-index: 10;
-  animation: slideInFromLeft 2s ease-out;
 }
 
 .home-hero__social-icon-link:hover {
@@ -99,7 +97,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  animation: fadeInIcon 3s ease-out forwards;
+  animation: fadeInIcon 2s ease-out forwards;
 }
 
 .home-hero__social-icon-link:nth-child(1) {
@@ -118,17 +116,52 @@
   animation-delay: 0.8s;
 }
 
-@keyframes fadeInIcon {
-  0% {
-    opacity: 0;
+@media only screen and (max-width: 768px) {
+  .welcome-text {
+    font-size: 3rem;
+    animation: typing-mobile 6s steps(30) infinite, blink 0.75s step-end infinite;
   }
-  100% {
-    opacity: 1;
+
+  .home-hero__social-icon-link {
+    animation: fadeInIcon 3s ease-out forwards;
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-hero__socials {
+    top: auto;
+    bottom: 0;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5rem 1rem;
+  }
+
+  svg {
+    width: 30px;
+    height: auto;
   }
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 480px) {
+  .welcome-text {
+    font-size: 2.5rem;
+    animation: typing-mobile 6s steps(30) infinite, blink 0.75s step-end infinite;
+  }
+
+  .home-hero__social-icon-link {
+    width: 35px;
+    height: 35px;
+    animation: fadeInIcon 3s ease-out forwards;
+  }
+
   .home-hero__socials {
-    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  svg {
+    width: 25px;
+    height: auto;
   }
 }

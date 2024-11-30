@@ -1,12 +1,10 @@
 import React from 'react';
 import './Home.css';
-import Header from '../../Components/Header/Header';
 
 const Home = () => {
   return (
     <div className="home-container">
-      <Header />
-      <div className="welcome-text">WELCOME TO MY PORTAFOLIO</div>
+      <div className="welcome-text">HI I'M SAID</div>
       <div className="home-hero__socials">
         {/* Twitter */}
         <a
